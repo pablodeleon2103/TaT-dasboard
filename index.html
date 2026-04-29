@@ -125,17 +125,17 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 .cola-total-n{font-family:'Bebas Neue';font-size:22px;color:var(--p-700);line-height:1;}
 
 /* ── PROD LIST ── */
-.prod-item{display:flex;align-items:center;gap:10px;padding:10px 14px;border-radius:9px;border:1px solid var(--borde-lite);background:var(--p-50);transition:background .15s;}
+.prod-item{border-radius:10px;border:1px solid var(--borde-lite);background:var(--p-50);padding:11px 14px;transition:background .15s;}.prod-item:hover{background:var(--p-100);}
 .prod-item:hover{background:var(--p-100);}
 .prod-dot{width:9px;height:9px;border-radius:50%;flex-shrink:0;}
-.prod-nm{font-size:12px;font-weight:600;color:var(--txt-pri);flex:1;}
+.prod-nm{font-size:12px;font-weight:700;color:var(--txt-pri);flex:1;min-width:0;}
 .prod-n{font-size:11px;color:var(--txt-dis);margin-right:4px;}
-.prod-tat{font-family:'Bebas Neue';font-size:20px;color:var(--p-600);line-height:1;}
+.prod-tat{font-family:'Bebas Neue';font-size:26px;color:var(--p-600);line-height:1;}
 .prod-unit{font-size:10px;color:var(--txt-dis);}
 .prod-delta{font-size:11px;font-weight:700;margin-left:4px;}
 .prod-delta.mejor{color:var(--verde);}
 .prod-delta.peor{color:var(--rojo);}
-.prod-bar-o{width:50px;height:5px;background:var(--p-200);border-radius:3px;overflow:hidden;flex-shrink:0;}
+.prod-bar-o{flex:1;height:5px;background:var(--p-200);border-radius:3px;overflow:hidden;}
 .prod-bar-i{height:100%;border-radius:3px;}
 
 /* ── HORARIO TARJETAS ── */
@@ -274,7 +274,7 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 <div class="main">
 <div class="grid-3">
 
-  <!-- COL IZQUIERDA -->
+  <!-- COL IZQUIERDA: Meta + KPIs -->
   <div class="col">
     <div class="meta-hero">
       <div class="meta-eyebrow">🎯 Objetivo del Mes</div>
@@ -328,7 +328,7 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
     </div>
   </div>
 
-  <!-- COL CENTRAL -->
+  <!-- COL CENTRAL: Horario + Donut + TaT por producto (horizontal) -->
   <div class="col">
     <div class="card">
       <div class="card-header"><div class="card-dot"></div><div class="card-title">Solicitudes por Franja Horaria vs Mes Anterior</div></div>
@@ -339,13 +339,22 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
         </div>
       </div>
     </div>
+
     <div class="card">
       <div class="card-header"><div class="card-dot"></div><div class="card-title">Distribución por Producto — Solicitudes del Mes</div></div>
-      <div class="card-body" style="height:210px;position:relative;"><canvas id="chartProd"></canvas></div>
+      <div class="card-body" style="height:220px;position:relative;"><canvas id="chartProd"></canvas></div>
+    </div>
+
+    <!-- TaT por producto en horizontal debajo del donut -->
+    <div class="card">
+      <div class="card-header"><div class="card-dot"></div><div class="card-title">TaT por Producto vs Mes Anterior</div></div>
+      <div class="card-body" style="padding:12px 14px;">
+        <div id="prodList" style="display:grid;grid-template-columns:1fr 1fr;gap:8px;"></div>
+      </div>
     </div>
   </div>
 
-  <!-- COL DERECHA -->
+  <!-- COL DERECHA: Cola + Pulso + Llamada a acción -->
   <div class="col">
     <div class="card">
       <div class="card-header"><div class="card-dot"></div><div class="card-title">Cola — Solo Solicitudes del Mes</div></div>
@@ -369,18 +378,29 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
       </div>
     </div>
 
-    <div class="card" style="flex:1;">
-      <div class="card-header"><div class="card-dot"></div><div class="card-title">TaT por Producto vs Mes Anterior</div></div>
-      <div class="card-body">
-        <div id="prodList" style="display:flex;flex-direction:column;gap:8px;"></div>
+    <div class="card" id="cardPulso">
+      <div class="card-header"><div class="card-dot" style="background:var(--verde);"></div><div class="card-title">Pulso del Mes</div></div>
+      <div class="card-body" id="bodyPulso"></div>
+    </div>
+
+    <div class="card" style="background:linear-gradient(135deg,var(--p-700),var(--p-600));border:none;">
+      <div class="card-body" style="padding:16px 18px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--p-300);margin-bottom:10px;">🎯 Clientes que puedes rescatar hoy</div>
+        <div style="font-family:'Bebas Neue';font-size:58px;line-height:1;color:#fff;" id="atacablesHero2">—</div>
+        <div style="font-size:12px;color:rgba(255,255,255,.65);margin-bottom:12px;" id="atacablesDesc">clientes atacables del mes</div>
+        <div style="background:rgba(255,255,255,.12);border-radius:8px;padding:10px 13px;margin-bottom:12px;">
+          <div style="font-size:10px;color:rgba(255,255,255,.55);margin-bottom:2px;">Sin rescate posible</div>
+          <div style="font-size:24px;font-family:'Bebas Neue';color:rgba(255,255,255,.4);" id="ruidoHero">—</div>
+        </div>
+        <div style="font-size:11px;color:rgba(255,255,255,.55);">
+          Ve a <strong style="color:#fff;">🎯 Clientes en Proceso</strong> para actuar.
+        </div>
       </div>
     </div>
+
   </div>
 
 </div>
-</div>
-</div>
-
 <!-- ══ TAB 2: HORARIO ══ -->
 <div class="tab-content" id="tab-horario">
 <div class="main">
@@ -548,16 +568,16 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 <script>
 // ══ DATOS (inyectados por actualizar_dashboard.py) ══
 const D = {
-  // Actualizado automáticamente — Miércoles 29 Abr 2026 13:41
+  // Actualizado automáticamente — Miércoles 29 Abr 2026 13:52
   mes_label: 'ABR 26',
   mes_anterior_label: 'Mar 26',
   fecha_corte: 'Miércoles 29 Abr 2026',
-  hora_actualizacion: '13:41',
-  n: 752,
+  hora_actualizacion: '13:52',
+  n: 753,
   tat_med: 2.99,
   tat_anterior: 3.36,
   meta: 3.02,
-  monto: 7030000,
+  monto: 7037500,
   limpio_pct: 100.0,
   reintentos: 0,
   reintentos_pct: 0.0,
@@ -566,7 +586,7 @@ const D = {
   cola_marzo_total: 48,
   cola_atacable: 35,
   cola_ruido: 13,
-  horario_mar: [{"b": "09–11h", "n": 115, "pct": 15.3}, {"b": "11–13h", "n": 194, "pct": 25.8}, {"b": "13–15h", "n": 171, "pct": 22.7}, {"b": "15–17h", "n": 147, "pct": 19.5}, {"b": "17–18h", "n": 58, "pct": 7.7}, {"b": "Fuera horario", "n": 67, "pct": 8.9}],
+  horario_mar: [{"b": "09–11h", "n": 115, "pct": 15.3}, {"b": "11–13h", "n": 194, "pct": 25.8}, {"b": "13–15h", "n": 172, "pct": 22.8}, {"b": "15–17h", "n": 147, "pct": 19.5}, {"b": "17–18h", "n": 58, "pct": 7.7}, {"b": "Fuera horario", "n": 67, "pct": 8.9}],
   horario_feb: [{"b": "09–11h", "n": 146, "pct": 14.9}, {"b": "11–13h", "n": 247, "pct": 25.2}, {"b": "13–15h", "n": 190, "pct": 19.4}, {"b": "15–17h", "n": 180, "pct": 18.4}, {"b": "17–18h", "n": 79, "pct": 8.1}, {"b": "Fuera horario", "n": 137, "pct": 14.0}],
   productos: [
     {
@@ -587,7 +607,7 @@ const D = {
     },
     {
         "label": "Reno. Título",
-        "n": 237,
+        "n": 238,
         "pct": 32,
         "tat_med": 4.31,
         "tat_prev": 4.73,
@@ -659,6 +679,17 @@ const D = {
     "ciudad": "Puebla"
   },
   {
+    "nombre": "Miguel Guadalupe  Alvarado Vázquez",
+    "titulo": "2AJ021000",
+    "producto": "Título",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 14,
+    "urgencia": "🔴",
+    "fecha": "15/04",
+    "ciudad": "Guadalajara"
+  },
+  {
     "nombre": "Marco Josué  Ramírez  Cruz",
     "titulo": "4CJ005080",
     "producto": "Título",
@@ -673,17 +704,6 @@ const D = {
     "nombre": "Alberto Antonio Baltazar  Pérez",
     "titulo": "1PJ021459",
     "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 13,
-    "urgencia": "🔴",
-    "fecha": "15/04",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "nombre": "Miguel Guadalupe  Alvarado Vázquez",
-    "titulo": "2AJ021000",
-    "producto": "Título",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
     "dias": 13,
@@ -769,6 +789,17 @@ const D = {
     "ciudad": "Puebla"
   },
   {
+    "nombre": "Aracely Sanchez  Tecanhuey",
+    "titulo": "5CJ005653",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 6,
+    "urgencia": "🟢",
+    "fecha": "23/04",
+    "ciudad": "Puebla"
+  },
+  {
     "nombre": "Francisco Javier  Vargas Torres",
     "titulo": "3AJ039739",
     "producto": "Híbrido",
@@ -778,17 +809,6 @@ const D = {
     "urgencia": "🟢",
     "fecha": "23/04",
     "ciudad": "Guadalajara"
-  },
-  {
-    "nombre": "Aracely Sanchez  Tecanhuey",
-    "titulo": "5CJ005653",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 5,
-    "urgencia": "🟢",
-    "fecha": "23/04",
-    "ciudad": "Puebla"
   },
   {
     "nombre": "Katia Eloisa Carbajal  Villegas",
@@ -923,15 +943,15 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "nombre": "Elsy Judith Lopez  Morales",
-    "titulo": "1DJ004370",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
+    "nombre": "Oscar Mendoza  Cortes",
+    "titulo": "2CJ070494",
+    "producto": "Título",
+    "paso": "Referencias",
+    "paso_raw": "datosReferenciaPersonal",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "29/04",
-    "ciudad": "Villahermosa"
+    "ciudad": "Guadalajara"
   },
   {
     "nombre": "Adan  Irisson  Hernandez",
@@ -945,11 +965,11 @@ const D = {
     "ciudad": "GDL"
   },
   {
-    "nombre": "Oscar Mendoza  Cortes",
-    "titulo": "2CJ070494",
-    "producto": "Título",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
+    "nombre": "Oscar Manuel Aguirre Gonzalez",
+    "titulo": "2AJ067002",
+    "producto": "Reno. Híbrido",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "29/04",
@@ -978,9 +998,9 @@ const D = {
     "ciudad": "Puebla"
   },
   {
-    "nombre": "Oscar Manuel Aguirre Gonzalez",
-    "titulo": "2AJ067002",
-    "producto": "Reno. Híbrido",
+    "nombre": "Guillermo  Pasillas Evangelista",
+    "titulo": "2CJ034626",
+    "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
     "dias": 0,
@@ -1097,25 +1117,25 @@ D.horario_mar.forEach((hm,i)=>{
 });
 
 // Chart productos donut
+// Donut distribución por producto
 const chartProdCtx = document.getElementById('chartProd');
 if(chartProdCtx){
-  new Chart(chartProdCtx, {
+  new Chart(chartProdCtx,{
     type:'doughnut',
     data:{
-      labels: D.productos.map(p=>p.label),
+      labels:D.productos.map(p=>p.label),
       datasets:[{
-        data: D.productos.map(p=>p.n),
-        backgroundColor: D.productos.map(p=>p.color+'cc'),
-        borderColor: D.productos.map(p=>p.color),
-        borderWidth:2, hoverOffset:6
+        data:D.productos.map(p=>p.n),
+        backgroundColor:D.productos.map(p=>p.color+'cc'),
+        borderColor:D.productos.map(p=>p.color),
+        borderWidth:2,hoverOffset:8
       }]
     },
     options:{
-      responsive:true, maintainAspectRatio:false, cutout:'62%',
+      responsive:true,maintainAspectRatio:false,cutout:'58%',
       plugins:{
-        legend:{display:true,position:'right',labels:{color:'#4a6080',font:{family:"'Plus Jakarta Sans'",size:11},boxWidth:10,padding:8}},
-        title:{display:true,text:'Distribución por Producto',color:'#0a1f3d',font:{family:"'Plus Jakarta Sans'",size:11,weight:'700'}},
-        tooltip:{callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed} sol.`}}
+        legend:{display:true,position:'right',labels:{color:'#4a6080',font:{family:"'Plus Jakarta Sans'",size:11},boxWidth:10,padding:10}},
+        tooltip:{callbacks:{label:ctx=>`${ctx.label}: ${ctx.parsed} sol. (${Math.round(ctx.parsed/D.n*100)}%)`}}
       }
     }
   });
@@ -1130,13 +1150,17 @@ D.productos.forEach(p=>{
   const dc = d<0?'mejor':d>0?'peor':'igual';
   const dt = d===0?'=':(d<0?'▼ ':'▲ +')+Math.abs(d)+'h';
   pl.innerHTML += `<div class="prod-item">
-    <div class="prod-dot" style="background:${p.color}"></div>
-    <div class="prod-nm">${p.label}</div>
-    <div class="prod-n">${p.n}</div>
-    <div class="prod-tat">${p.tat_med.toFixed(1)}</div>
-    <div class="prod-unit">hrs</div>
-    <div class="prod-delta ${dc}">${dt}</div>
-    <div class="prod-bar-o"><div class="prod-bar-i" style="width:${w}%;background:${p.color}"></div></div>
+    <div style="display:flex;align-items:center;gap:6px;margin-bottom:6px;">
+      <div class="prod-dot" style="background:${p.color}"></div>
+      <div class="prod-nm">${p.label}</div>
+    </div>
+    <div style="display:flex;align-items:baseline;gap:4px;margin-bottom:4px;">
+      <div class="prod-tat">${p.tat_med.toFixed(1)}</div>
+      <div class="prod-unit">hrs</div>
+    </div>
+    <div style="font-size:10px;color:var(--txt-dis);margin-bottom:5px;">${p.n} sol.</div>
+    <div class="prod-bar-o" style="width:100%;"><div class="prod-bar-i" style="width:${w}%;background:${p.color}"></div></div>
+    <div class="prod-delta ${dc}" style="margin-top:4px;font-size:10px;">${dt} vs ${D.mes_anterior_label}</div>
   </div>`;
 });
 
@@ -1261,6 +1285,63 @@ function filtrar(){
     else if(filtroAct==='disp')    pf=['enEsperaDispersion','inicio'].includes(p);
     r.style.display=(pq&&pf)?'':'none';
   });
+}
+
+// ══ CARDS MOTIVACIONALES TAB 1 ══
+
+// Atacables hero
+document.getElementById('atacablesHero2').textContent = D.cola_atacable;
+document.getElementById('ruidoHero').textContent = D.cola_ruido + ' sin rescate';
+const descAtac = document.getElementById('atacablesDesc');
+if(descAtac){
+  const urgentes = D.clientes_atacables.filter(c=>c.dias>=10).length;
+  descAtac.textContent = urgentes>0
+    ? `${urgentes} con alta urgencia — actúa hoy`
+    : `clientes atacables del mes — actúa esta semana`;
+}
+
+// Pulso del mes
+const bodyPulso = document.getElementById('bodyPulso');
+if(bodyPulso){
+  // Calcular días hábiles transcurridos y proyección
+  const hoy = new Date();
+  const diaDelMes = hoy.getDate();
+  const diasHabilesMes = 22; // promedio
+  const diasTranscurridos = Math.min(diaDelMes, diasHabilesMes);
+  const ritmo = diasTranscurridos > 0 ? Math.round(D.n / diasTranscurridos) : 0;
+  const proyeccion = Math.round(ritmo * diasHabilesMes);
+  const deltaProy = proyeccion - (D.n_anterior || D.n);
+  const pctMes = Math.min(100, Math.round(diasTranscurridos / diasHabilesMes * 100));
+
+  // TaT vs meta
+  const cumpleMeta = D.tat_med <= D.meta;
+  const pctReduc = D.tat_anterior > 0 ? Math.round((1 - D.tat_med/D.tat_anterior)*100) : 0;
+
+  bodyPulso.innerHTML = `
+    <div style="display:flex;flex-direction:column;gap:10px;">
+      <div>
+        <div style="display:flex;justify-content:space-between;margin-bottom:4px;">
+          <span style="font-size:11px;color:var(--txt-sec);font-weight:600;">Avance del mes</span>
+          <span style="font-size:11px;font-weight:700;color:var(--p-600);">${pctMes}%</span>
+        </div>
+        <div style="height:8px;background:var(--p-100);border-radius:5px;overflow:hidden;">
+          <div style="height:100%;width:${pctMes}%;background:linear-gradient(90deg,var(--p-500),var(--p-400));border-radius:5px;transition:width 1s ease;"></div>
+        </div>
+        <div style="font-size:10px;color:var(--txt-dis);margin-top:3px;">Día ${diaDelMes} del mes · ~${diasHabilesMes} días hábiles</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+        <div style="background:var(--p-50);border-radius:8px;padding:9px 11px;border:1px solid var(--borde-lite);">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--txt-dis);margin-bottom:2px;">Ritmo diario</div>
+          <div style="font-family:'Bebas Neue';font-size:26px;color:var(--p-700);line-height:1;">${ritmo}</div>
+          <div style="font-size:10px;color:var(--txt-dis);">sol/día hábil</div>
+        </div>
+        <div style="background:${cumpleMeta?'rgba(0,184,122,.07)':'rgba(240,125,42,.06)'};border-radius:8px;padding:9px 11px;border:1px solid ${cumpleMeta?'rgba(0,184,122,.2)':'rgba(240,125,42,.2)'};">
+          <div style="font-size:9px;text-transform:uppercase;letter-spacing:.06em;color:var(--txt-dis);margin-bottom:2px;">TaT vs meta</div>
+          <div style="font-family:'Bebas Neue';font-size:26px;color:${cumpleMeta?'var(--verde)':'var(--naranja)'};line-height:1;">${cumpleMeta?'✓':'→'}</div>
+          <div style="font-size:10px;color:${cumpleMeta?'var(--verde)':'var(--naranja)'};font-weight:600;">${cumpleMeta?pctReduc+'% más rápido':'En proceso'}</div>
+        </div>
+      </div>
+    </div>`;
 }
 
 // ══ TAB 4: CHECKLIST ══

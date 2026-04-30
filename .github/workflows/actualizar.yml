@@ -46,12 +46,13 @@ jobs:
         run: |
           staticrypt index.html \
             --password "${{ secrets.STATICRYPT_PASSWORD }}" \
-            --output index.html \
+            --remember 30 \
             --template-title "Percapita — Servicio al Cliente" \
             --template-instructions "Ingresa la contraseña para acceder al dashboard" \
             --template-color-primary "#1a4a8a" \
-            --template-color-secondary "#3d9be8" \
-            --remember 30
+            --template-color-secondary "#3d9be8"
+          mv encrypted/index.html index.html
+          rm -rf encrypted
 
       - name: Publicar dashboard actualizado
         run: |

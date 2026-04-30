@@ -1,0 +1,56 @@
+name: Actualizar Dashboard Percapita
+
+on:
+  schedule:
+    # Cada hora de lunes a viernes, 8am-7pm hora Ciudad de México (UTC-6)
+    # En UTC eso es 14:00-01:00 → usamos 14,15,16,17,18,19,20,21,22,23,0,1
+    - cron: '0 14 * * 1-5'
+    - cron: '0 15 * * 1-5'
+    - cron: '0 16 * * 1-5'
+    - cron: '0 17 * * 1-5'
+    - cron: '0 18 * * 1-5'
+    - cron: '0 19 * * 1-5'
+    - cron: '0 20 * * 1-5'
+    - cron: '0 21 * * 1-5'
+    - cron: '0 22 * * 1-5'
+    - cron: '0 23 * * 1-5'
+    - cron: '0 0  * * 2-6'
+    - cron: '0 1  * * 2-6'
+  # También se puede ejecutar manualmente desde GitHub
+  workflow_dispatch:
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Descargar el repositorio
+      - name: Checkout repositorio
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      # 2. Instalar Python
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      # 3. Instalar dependencias
+      - name: Instalar dependencias
+        run: pip install pandas requests numpy
+
+      # 4. Correr el script de actualización
+      - name: Actualizar dashboard
+        env:
+          CSV_URL: https://nueva.percapita.mx/api/creditos/reporte/export/csv
+        run: python actualizar_github_actions.py
+
+      # 5. Hacer commit y push del index.html actualizado
+      - name: Publicar dashboard actualizado
+        run: |
+          git config user.name  "Dashboard Bot"
+          git config user.email "bot@percapita.mx"
+          git add index.html
+          git diff --staged --quiet || git commit -m "Dashboard actualizado $(date +'%Y-%m-%d %H:%M') CST"
+          git push

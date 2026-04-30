@@ -401,6 +401,8 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
   </div>
 
 </div>
+</div>
+</div>
 <!-- ══ TAB 2: HORARIO ══ -->
 <div class="tab-content" id="tab-horario">
 <div class="main">
@@ -566,58 +568,59 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 <div class="footer"></div>
 
 <script>
+
 // ══ DATOS (inyectados por actualizar_dashboard.py) ══
 const D = {
-  // Actualizado automáticamente — Miércoles 29 Abr 2026 14:02
+  // Actualizado automáticamente — Jueves 30 Abr 2026 08:49
   mes_label: 'ABR 26',
   mes_anterior_label: 'Mar 26',
-  fecha_corte: 'Miércoles 29 Abr 2026',
-  hora_actualizacion: '14:02',
-  n: 754,
-  tat_med: 2.99,
+  fecha_corte: 'Jueves 30 Abr 2026',
+  hora_actualizacion: '08:49',
+  n: 770,
+  tat_med: 2.89,
   tat_anterior: 3.36,
   meta: 3.02,
-  monto: 7037500,
+  monto: 7172500,
   limpio_pct: 100.0,
   reintentos: 0,
   reintentos_pct: 0.0,
-  mismodia_pct: 84.4,
+  mismodia_pct: 84.7,
   mismodia_prev: 75.8,
   cola_marzo_total: 49,
   cola_atacable: 36,
   cola_ruido: 13,
-  horario_mar: [{"b": "09–11h", "n": 115, "pct": 15.3}, {"b": "11–13h", "n": 194, "pct": 25.7}, {"b": "13–15h", "n": 173, "pct": 22.9}, {"b": "15–17h", "n": 147, "pct": 19.5}, {"b": "17–18h", "n": 58, "pct": 7.7}, {"b": "Fuera horario", "n": 67, "pct": 8.9}],
+  horario_mar: [{"b": "09–11h", "n": 115, "pct": 14.9}, {"b": "11–13h", "n": 195, "pct": 25.3}, {"b": "13–15h", "n": 175, "pct": 22.7}, {"b": "15–17h", "n": 156, "pct": 20.3}, {"b": "17–18h", "n": 61, "pct": 7.9}, {"b": "Fuera horario", "n": 68, "pct": 8.8}],
   horario_feb: [{"b": "09–11h", "n": 146, "pct": 14.9}, {"b": "11–13h", "n": 247, "pct": 25.2}, {"b": "13–15h", "n": 190, "pct": 19.4}, {"b": "15–17h", "n": 180, "pct": 18.4}, {"b": "17–18h", "n": 79, "pct": 8.1}, {"b": "Fuera horario", "n": 137, "pct": 14.0}],
   productos: [
     {
         "label": "Título",
-        "n": 293,
+        "n": 299,
         "pct": 39,
-        "tat_med": 3.31,
+        "tat_med": 3.27,
         "tat_prev": 5.21,
         "color": "#3d9be8"
     },
     {
         "label": "Híbrido",
-        "n": 169,
+        "n": 173,
         "pct": 22,
-        "tat_med": 1.32,
+        "tat_med": 1.31,
         "tat_prev": 1.27,
         "color": "#00c896"
     },
     {
         "label": "Reno. Título",
-        "n": 238,
-        "pct": 32,
+        "n": 242,
+        "pct": 31,
         "tat_med": 4.31,
         "tat_prev": 4.73,
         "color": "#ff8c42"
     },
     {
         "label": "Reno. Híbrido",
-        "n": 54,
+        "n": 56,
         "pct": 7,
-        "tat_med": 1.69,
+        "tat_med": 1.71,
         "tat_prev": 1.63,
         "color": "#f5c842"
     }
@@ -638,7 +641,7 @@ const D = {
     "producto": "Reno. Híbrido",
     "paso": "Dispersión iniciada",
     "paso_raw": "inicio",
-    "dias": 14,
+    "dias": 15,
     "urgencia": "🔴",
     "fecha": "14/04",
     "ciudad": "Guadalajara"
@@ -648,7 +651,7 @@ const D = {
     "producto": "Título",
     "paso": "Validación CURP",
     "paso_raw": "generaCURP",
-    "dias": 14,
+    "dias": 15,
     "urgencia": "🔴",
     "fecha": "14/04",
     "ciudad": "Cancun"
@@ -658,7 +661,7 @@ const D = {
     "producto": "Título",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
-    "dias": 14,
+    "dias": 15,
     "urgencia": "🔴",
     "fecha": "14/04",
     "ciudad": "Guadalajara"
@@ -668,10 +671,30 @@ const D = {
     "producto": "Híbrido",
     "paso": "Validación CURP",
     "paso_raw": "generaCURP",
+    "dias": 15,
+    "urgencia": "🔴",
+    "fecha": "15/04",
+    "ciudad": "Puebla"
+  },
+  {
+    "titulo": "4CJ005080",
+    "producto": "Título",
+    "paso": "Medio de entrega",
+    "paso_raw": "medioEntrega",
     "dias": 14,
     "urgencia": "🔴",
     "fecha": "15/04",
     "ciudad": "Puebla"
+  },
+  {
+    "titulo": "1PJ021459",
+    "producto": "Híbrido",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 14,
+    "urgencia": "🔴",
+    "fecha": "15/04",
+    "ciudad": "Guadalajara"
   },
   {
     "titulo": "2AJ021000",
@@ -684,31 +707,11 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "4CJ005080",
-    "producto": "Título",
-    "paso": "Medio de entrega",
-    "paso_raw": "medioEntrega",
-    "dias": 13,
-    "urgencia": "🔴",
-    "fecha": "15/04",
-    "ciudad": "Puebla"
-  },
-  {
-    "titulo": "1PJ021459",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 13,
-    "urgencia": "🔴",
-    "fecha": "15/04",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "1AF038086",
     "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
-    "dias": 12,
+    "dias": 13,
     "urgencia": "🔴",
     "fecha": "16/04",
     "ciudad": "Guadalajara"
@@ -718,7 +721,7 @@ const D = {
     "producto": "Título",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
-    "dias": 11,
+    "dias": 12,
     "urgencia": "🔴",
     "fecha": "17/04",
     "ciudad": "Cancun"
@@ -738,7 +741,7 @@ const D = {
     "producto": "Título",
     "paso": "Teléfono",
     "paso_raw": "telefonoPersona",
-    "dias": 8,
+    "dias": 9,
     "urgencia": "🟡",
     "fecha": "20/04",
     "ciudad": "Puebla"
@@ -748,7 +751,7 @@ const D = {
     "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
-    "dias": 7,
+    "dias": 8,
     "urgencia": "🟡",
     "fecha": "21/04",
     "ciudad": "Guadalajara"
@@ -761,6 +764,16 @@ const D = {
     "dias": 7,
     "urgencia": "🟡",
     "fecha": "22/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3AJ039739",
+    "producto": "Híbrido",
+    "paso": "Referencias",
+    "paso_raw": "datosReferenciaPersonal",
+    "dias": 6,
+    "urgencia": "🟢",
+    "fecha": "23/04",
     "ciudad": "Guadalajara"
   },
   {
@@ -784,33 +797,13 @@ const D = {
     "ciudad": "Puebla"
   },
   {
-    "titulo": "3AJ039739",
-    "producto": "Híbrido",
-    "paso": "Referencias",
-    "paso_raw": "datosReferenciaPersonal",
-    "dias": 5,
-    "urgencia": "🟢",
-    "fecha": "23/04",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "1AJ087296",
     "producto": "Título",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
-    "dias": 5,
+    "dias": 6,
     "urgencia": "🟢",
     "fecha": "23/04",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "3CJ083327",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 5,
-    "urgencia": "🟢",
-    "fecha": "24/04",
     "ciudad": "Guadalajara"
   },
   {
@@ -818,7 +811,7 @@ const D = {
     "producto": "Híbrido",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
-    "dias": 4,
+    "dias": 5,
     "urgencia": "🟢",
     "fecha": "24/04",
     "ciudad": "Toluca"
@@ -828,7 +821,7 @@ const D = {
     "producto": "Híbrido",
     "paso": "Validación CURP",
     "paso_raw": "generaCURP",
-    "dias": 4,
+    "dias": 5,
     "urgencia": "🟢",
     "fecha": "24/04",
     "ciudad": "Puebla"
@@ -838,7 +831,17 @@ const D = {
     "producto": "Título",
     "paso": "Teléfono",
     "paso_raw": "telefonoPersona",
-    "dias": 4,
+    "dias": 5,
+    "urgencia": "🟢",
+    "fecha": "24/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3CJ083327",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 5,
     "urgencia": "🟢",
     "fecha": "24/04",
     "ciudad": "Guadalajara"
@@ -858,9 +861,19 @@ const D = {
     "producto": "Híbrido",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
-    "dias": 3,
+    "dias": 4,
     "urgencia": "🟢",
     "fecha": "25/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "1CJ011162",
+    "producto": "Reno. Título",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 2,
+    "urgencia": "🟢",
+    "fecha": "27/04",
     "ciudad": "Guadalajara"
   },
   {
@@ -884,16 +897,6 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "1CJ011162",
-    "producto": "Reno. Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 1,
-    "urgencia": "🟢",
-    "fecha": "27/04",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "2CF034369",
     "producto": "Título",
     "paso": "Prueba de vida",
@@ -901,6 +904,56 @@ const D = {
     "dias": 1,
     "urgencia": "🟢",
     "fecha": "28/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "4CJ046818",
+    "producto": "Híbrido",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 1,
+    "urgencia": "🟢",
+    "fecha": "28/04",
+    "ciudad": "Puebla"
+  },
+  {
+    "titulo": "2CJ003803",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "29/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "1BJ010072",
+    "producto": "Reno. Título",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "29/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "1CJ114420",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "29/04",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "2AJ005669",
+    "producto": "Reno. Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "29/04",
     "ciudad": "Guadalajara"
   },
   {
@@ -914,36 +967,6 @@ const D = {
     "ciudad": "GDL"
   },
   {
-    "titulo": "2AJ067002",
-    "producto": "Reno. Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "29/04",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "2CJ070494",
-    "producto": "Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "29/04",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "2CJ034626",
-    "producto": "Reno. Título",
-    "paso": "Datos empleo",
-    "paso_raw": "datosEmpleo",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "29/04",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "1AJ097945",
     "producto": "Título",
     "paso": "En evaluación",
@@ -954,30 +977,10 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "2DJ003106",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "29/04",
-    "ciudad": "Puebla"
-  },
-  {
-    "titulo": "4CJ046818",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "28/04",
-    "ciudad": "Puebla"
-  },
-  {
-    "titulo": "1PJ006176",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
+    "titulo": "V000530",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "29/04",
@@ -986,6 +989,97 @@ const D = {
 ],
 };
 
+function showTab(id, el){
+  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  el.classList.add('active');
+}
+function setF(f,el){
+  filtroAct=f;
+  document.querySelectorAll('.filtro-btn').forEach(b=>b.classList.remove('active'));
+  el.classList.add('active');
+  filtrar();
+}
+function filtrar(){
+  const q=document.getElementById('buscar').value.toLowerCase();
+  document.querySelectorAll('#tbodyAtac tr').forEach(r=>{
+    const pq = !q||r.dataset.buscar.includes(q);
+    const d=parseInt(r.dataset.dias||0), p=r.dataset.paso||'';
+    let pf=true;
+    if(filtroAct==='alta')    pf=d>=10;
+    else if(filtroAct==='media')   pf=d>=7&&d<10;
+    else if(filtroAct==='reciente') pf=d<7;
+    else if(filtroAct==='curp')    pf=p==='generaCURP';
+    else if(filtroAct==='vida')    pf=p==='procesoPruebaDeVida';
+    else if(filtroAct==='disp')    pf=['enEsperaDispersion','inicio'].includes(p);
+    r.style.display=(pq&&pf)?'':'none';
+  });
+}
+function toggleCheck(id){
+  const ci=document.getElementById('ci-'+id);
+  if(ci.classList.contains('done')) desactivarCheck(id,true);
+  else activarCheck(id,true);
+}
+function activarCheck(id,guardar){
+  const ci=document.getElementById('ci-'+id);
+  ci.classList.add('done');
+  if(guardar){let e={};try{e=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(ex){}e[id]=true;localStorage.setItem(HOY_KEY(),JSON.stringify(e));}
+  actualizarProgreso();
+}
+function desactivarCheck(id,guardar){
+  const ci=document.getElementById('ci-'+id);
+  ci.classList.remove('done');
+  if(guardar){let e={};try{e=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(ex){}e[id]=false;localStorage.setItem(HOY_KEY(),JSON.stringify(e));}
+  actualizarProgreso();
+}
+function actualizarProgreso(){
+  const activos = ES_LUN_JUE() ? CHECK_ALL : ['llamadas','referidos','activos'];
+  const total   = activos.length;
+  const hechos  = activos.filter(id=>document.getElementById('ci-'+id)?.classList.contains('done')).length;
+  const pct     = Math.round(hechos/total*100);
+  document.getElementById('progBar').style.width=pct+'%';
+  document.getElementById('progTxt').textContent=hechos+'/'+total;
+  const badge=document.getElementById('badgeCheck');
+  badge.textContent=hechos+'/'+total;
+  badge.style.background=hechos===total?'var(--verde)':hechos>0?'var(--p-500)':'var(--txt-dis)';
+  document.getElementById('doneBanner').classList.toggle('visible',hechos===total&&total>0);
+}
+function resetChecklist(){
+  if(!confirm('¿Reiniciar el checklist de hoy?'))return;
+  localStorage.removeItem(HOY_KEY());
+  CHECK_ALL.forEach(id=>desactivarCheck(id,false));
+}
+function initChecklist(){
+  const n    = new Date();
+  const dow  = n.getDay();
+  const hoy  = DIAS_ES[dow];
+  const fecha= `${hoy} ${n.getDate()} ${MESES_ES[n.getMonth()]} ${n.getFullYear()}`;
+  document.getElementById('fechaCheck').textContent = fecha;
+
+  const nota = document.getElementById('notaDia');
+  const nc   = document.getElementById('notaCheques');
+  if([1,4].includes(dow)){
+    nota.innerHTML = `<strong>📆 ${hoy}:</strong> Día de cheques — recuerda anotar en Zell los números de cheques en turno mañana y al cierre.`;
+    nota.style.borderLeftColor='rgba(232,184,0,.5)'; nota.style.color='#7a5e00'; nota.style.background='rgba(232,184,0,.08)';
+    nc.style.display='block';
+    nc.textContent = `✅ Hoy es ${hoy} — estas actividades están activas.`;
+  } else {
+    nota.innerHTML = `<strong>📋 ${hoy}:</strong> Las actividades de cheques (lunes y jueves) no aplican hoy. Completa las 3 actividades diarias.`;
+    ['cheques1','cheques2'].forEach(id=>{
+      const el=document.getElementById('ci-'+id);
+      if(el){el.style.opacity='.35';el.style.pointerEvents='none';}
+    });
+  }
+
+  // Restaurar estado guardado
+  let est={};
+  try{est=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(e){}
+  CHECK_ALL.forEach(id=>{if(est[id])activarCheck(id,false);});
+  actualizarProgreso();
+}
+
+document.addEventListener("DOMContentLoaded", function() {
 // ══ UTILIDADES ══
 const r2 = v => Math.round(v*100)/100;
 const DIAS_ES  = ['Domingo','Lunes','Martes','Miércoles','Jueves','Viernes','Sábado'];
@@ -1002,12 +1096,6 @@ function tick(){
 setInterval(tick,1000); tick();
 
 // ══ TABS ══
-function showTab(id, el){
-  document.querySelectorAll('.tab-content').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
-  document.getElementById('tab-'+id).classList.add('active');
-  el.classList.add('active');
-}
 
 // ══ TAB 1: MÉTRICAS ══
 
@@ -1093,6 +1181,7 @@ D.horario_mar.forEach((hm,i)=>{
 
 // Chart productos donut
 // Donut distribución por producto
+try {
 const chartProdCtx = document.getElementById('chartProd');
 if(chartProdCtx){
   new Chart(chartProdCtx,{
@@ -1115,6 +1204,7 @@ if(chartProdCtx){
     }
   });
 }
+} catch(eChart) { console.warn("Chart chartProdCtx error:", eChart.message); }
 
 // Lista productos
 const pl = document.getElementById('prodList');
@@ -1152,6 +1242,7 @@ const bsHor    = {
   }
 };
 
+try {
 const chartHorVolCtx = document.getElementById('chartHorVol');
 if(chartHorVolCtx){
   new Chart(chartHorVolCtx, {
@@ -1166,7 +1257,9 @@ if(chartHorVolCtx){
     options:{...bsHor}
   });
 }
+} catch(eChart) { console.warn("Chart chartHorVolCtx error:", eChart.message); }
 
+try {
 const chartHorPctCtx = document.getElementById('chartHorPct');
 if(chartHorPctCtx){
   new Chart(chartHorPctCtx, {
@@ -1181,6 +1274,7 @@ if(chartHorPctCtx){
     options:{...bsHor}
   });
 }
+} catch(eChart) { console.warn("Chart chartHorPctCtx error:", eChart.message); }
 
 // Tabla comparativa
 const tbody2 = document.getElementById('tablaHorBody');
@@ -1239,27 +1333,6 @@ D.clientes_atacables.forEach(c=>{
 });
 
 let filtroAct='todos';
-function setF(f,el){
-  filtroAct=f;
-  document.querySelectorAll('.filtro-btn').forEach(b=>b.classList.remove('active'));
-  el.classList.add('active');
-  filtrar();
-}
-function filtrar(){
-  const q=document.getElementById('buscar').value.toLowerCase();
-  document.querySelectorAll('#tbodyAtac tr').forEach(r=>{
-    const pq = !q||r.dataset.buscar.includes(q);
-    const d=parseInt(r.dataset.dias||0), p=r.dataset.paso||'';
-    let pf=true;
-    if(filtroAct==='alta')    pf=d>=10;
-    else if(filtroAct==='media')   pf=d>=7&&d<10;
-    else if(filtroAct==='reciente') pf=d<7;
-    else if(filtroAct==='curp')    pf=p==='generaCURP';
-    else if(filtroAct==='vida')    pf=p==='procesoPruebaDeVida';
-    else if(filtroAct==='disp')    pf=['enEsperaDispersion','inicio'].includes(p);
-    r.style.display=(pq&&pf)?'':'none';
-  });
-}
 
 // ══ CARDS MOTIVACIONALES TAB 1 ══
 
@@ -1284,7 +1357,7 @@ if(bodyPulso){
   const diasTranscurridos = Math.min(diaDelMes, diasHabilesMes);
   const ritmo = diasTranscurridos > 0 ? Math.round(D.n / diasTranscurridos) : 0;
   const proyeccion = Math.round(ritmo * diasHabilesMes);
-  const deltaProy = proyeccion - (D.n_anterior || D.n);
+  const deltaProy = 0;
   const pctMes = Math.min(100, Math.round(diasTranscurridos / diasHabilesMes * 100));
 
   // TaT vs meta
@@ -1323,72 +1396,13 @@ const CHECK_ALL  = ['llamadas','referidos','activos','cheques1','cheques2'];
 const HOY_KEY    = ()=>'chk_'+new Date().toISOString().slice(0,10);
 const ES_LUN_JUE = ()=>[1,4].includes(new Date().getDay());
 
-function initChecklist(){
-  const n    = new Date();
-  const dow  = n.getDay();
-  const hoy  = DIAS_ES[dow];
-  const fecha= `${hoy} ${n.getDate()} ${MESES_ES[n.getMonth()]} ${n.getFullYear()}`;
-  document.getElementById('fechaCheck').textContent = fecha;
 
-  const nota = document.getElementById('notaDia');
-  const nc   = document.getElementById('notaCheques');
-  if([1,4].includes(dow)){
-    nota.innerHTML = `<strong>📆 ${hoy}:</strong> Día de cheques — recuerda anotar en Zell los números de cheques en turno mañana y al cierre.`;
-    nota.style.borderLeftColor='rgba(232,184,0,.5)'; nota.style.color='#7a5e00'; nota.style.background='rgba(232,184,0,.08)';
-    nc.style.display='block';
-    nc.textContent = `✅ Hoy es ${hoy} — estas actividades están activas.`;
-  } else {
-    nota.innerHTML = `<strong>📋 ${hoy}:</strong> Las actividades de cheques (lunes y jueves) no aplican hoy. Completa las 3 actividades diarias.`;
-    ['cheques1','cheques2'].forEach(id=>{
-      const el=document.getElementById('ci-'+id);
-      if(el){el.style.opacity='.35';el.style.pointerEvents='none';}
-    });
-  }
-
-  // Restaurar estado guardado
-  let est={};
-  try{est=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(e){}
-  CHECK_ALL.forEach(id=>{if(est[id])activarCheck(id,false);});
-  actualizarProgreso();
-}
-
-function toggleCheck(id){
-  const ci=document.getElementById('ci-'+id);
-  if(ci.classList.contains('done')) desactivarCheck(id,true);
-  else activarCheck(id,true);
-}
-function activarCheck(id,guardar){
-  const ci=document.getElementById('ci-'+id);
-  ci.classList.add('done');
-  if(guardar){let e={};try{e=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(ex){}e[id]=true;localStorage.setItem(HOY_KEY(),JSON.stringify(e));}
-  actualizarProgreso();
-}
-function desactivarCheck(id,guardar){
-  const ci=document.getElementById('ci-'+id);
-  ci.classList.remove('done');
-  if(guardar){let e={};try{e=JSON.parse(localStorage.getItem(HOY_KEY())||'{}');}catch(ex){}e[id]=false;localStorage.setItem(HOY_KEY(),JSON.stringify(e));}
-  actualizarProgreso();
-}
-function actualizarProgreso(){
-  const activos = ES_LUN_JUE() ? CHECK_ALL : ['llamadas','referidos','activos'];
-  const total   = activos.length;
-  const hechos  = activos.filter(id=>document.getElementById('ci-'+id)?.classList.contains('done')).length;
-  const pct     = Math.round(hechos/total*100);
-  document.getElementById('progBar').style.width=pct+'%';
-  document.getElementById('progTxt').textContent=hechos+'/'+total;
-  const badge=document.getElementById('badgeCheck');
-  badge.textContent=hechos+'/'+total;
-  badge.style.background=hechos===total?'var(--verde)':hechos>0?'var(--p-500)':'var(--txt-dis)';
-  document.getElementById('doneBanner').classList.toggle('visible',hechos===total&&total>0);
-}
-function resetChecklist(){
-  if(!confirm('¿Reiniciar el checklist de hoy?'))return;
-  localStorage.removeItem(HOY_KEY());
-  CHECK_ALL.forEach(id=>desactivarCheck(id,false));
-}
 // Limpiar días anteriores
 (()=>{const hk=HOY_KEY();Object.keys(localStorage).filter(k=>k.startsWith('chk_')&&k!==hk).forEach(k=>localStorage.removeItem(k));})();
 initChecklist();
+initChecklist();
+});
+
 </script>
 </body>
 </html>

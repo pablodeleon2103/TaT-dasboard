@@ -571,36 +571,36 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 
 // ══ DATOS (inyectados por actualizar_dashboard.py) ══
 const D = {
-  // Actualizado automáticamente — Lunes 4 May 2026 21:45
+  // Actualizado automáticamente — Lunes 4 May 2026 22:17
   mes_label: 'MAY 26',
   mes_anterior_label: 'Abr 26',
   fecha_corte: 'Lunes 4 May 2026',
-  hora_actualizacion: '21:45',
-  n: 65,
+  hora_actualizacion: '22:17',
+  n: 69,
   tat_med: 1.47,
-  tat_anterior: 3.0,
-  meta: 2.8,
-  monto: 402500,
+  tat_anterior: 3.03,
+  meta: 2.73,
+  monto: 437500,
   mismodia_pct: 100.0,
-  mismodia_prev: 84.3,
-  cola_marzo_total: 20,
-  cola_atacable: 20,
+  mismodia_prev: 84.0,
+  cola_marzo_total: 19,
+  cola_atacable: 19,
   cola_ruido: 0,
-  horario_mar: [{"b": "09–11h", "n": 12, "pct": 18.5}, {"b": "11–13h", "n": 24, "pct": 36.9}, {"b": "13–15h", "n": 18, "pct": 27.7}, {"b": "15–17h", "n": 6, "pct": 9.2}, {"b": "17–18h", "n": 1, "pct": 1.5}, {"b": "Fuera horario", "n": 4, "pct": 6.2}],
+  horario_mar: [{"b": "09–11h", "n": 12, "pct": 17.4}, {"b": "11–13h", "n": 24, "pct": 34.8}, {"b": "13–15h", "n": 18, "pct": 26.1}, {"b": "15–17h", "n": 10, "pct": 14.5}, {"b": "17–18h", "n": 1, "pct": 1.4}, {"b": "Fuera horario", "n": 4, "pct": 5.8}],
   horario_feb: [{"b": "09–11h", "n": 122, "pct": 15.1}, {"b": "11–13h", "n": 201, "pct": 24.9}, {"b": "13–15h", "n": 187, "pct": 23.1}, {"b": "15–17h", "n": 162, "pct": 20.0}, {"b": "17–18h", "n": 65, "pct": 8.0}, {"b": "Fuera horario", "n": 71, "pct": 8.8}],
   productos: [
     {
         "label": "Título",
-        "n": 14,
+        "n": 15,
         "pct": 22,
         "tat_med": 1.57,
-        "tat_prev": 3.27,
+        "tat_prev": 3.29,
         "color": "#3d9be8"
     },
     {
         "label": "Híbrido",
-        "n": 26,
-        "pct": 40,
+        "n": 29,
+        "pct": 42,
         "tat_med": 0.46,
         "tat_prev": 1.31,
         "color": "#00c896"
@@ -608,31 +608,21 @@ const D = {
     {
         "label": "Reno. Título",
         "n": 22,
-        "pct": 34,
+        "pct": 32,
         "tat_med": 2.67,
-        "tat_prev": 4.56,
+        "tat_prev": 4.63,
         "color": "#ff8c42"
     },
     {
         "label": "Reno. Híbrido",
         "n": 3,
-        "pct": 5,
+        "pct": 4,
         "tat_med": 0.78,
         "tat_prev": 1.71,
         "color": "#f5c842"
     }
 ],
   clientes_atacables: [
-  {
-    "titulo": "3CJ012929",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 3,
-    "urgencia": "🟢",
-    "fecha": "01/05",
-    "ciudad": "Mérida"
-  },
   {
     "titulo": "4CJ032133",
     "producto": "Híbrido",
@@ -642,6 +632,16 @@ const D = {
     "urgencia": "🟢",
     "fecha": "01/05",
     "ciudad": "Toluca"
+  },
+  {
+    "titulo": "3CJ012929",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 3,
+    "urgencia": "🟢",
+    "fecha": "01/05",
+    "ciudad": "Mérida"
   },
   {
     "titulo": "2CJ006881",
@@ -654,16 +654,6 @@ const D = {
     "ciudad": "Tuxtla"
   },
   {
-    "titulo": "2AJ028738",
-    "producto": "Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 2,
-    "urgencia": "🟢",
-    "fecha": "02/05",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "2AJ000780",
     "producto": "Título",
     "paso": "datosDomicilioCobranza",
@@ -674,10 +664,30 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "3AJ060012",
+    "titulo": "2NJ002072",
+    "producto": "Híbrido",
+    "paso": "Datos empleo",
+    "paso_raw": "datosEmpleo",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "04/05",
+    "ciudad": "Tampico"
+  },
+  {
+    "titulo": "2CJ010818",
     "producto": "Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
+    "paso": "Datos domicilio",
+    "paso_raw": "datosDomicilio",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "04/05",
+    "ciudad": "Cancun"
+  },
+  {
+    "titulo": "3AJ024783",
+    "producto": "Híbrido",
+    "paso": "Referencias",
+    "paso_raw": "datosReferenciaPersonal",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "04/05",
@@ -686,16 +696,16 @@ const D = {
   {
     "titulo": "H020661",
     "producto": "Reno. Título",
-    "paso": "Datos empleo",
-    "paso_raw": "datosEmpleo",
+    "paso": "Medio de entrega",
+    "paso_raw": "medioEntrega",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "04/05",
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "2CJ047052",
-    "producto": "Reno. Título",
+    "titulo": "3AJ060012",
+    "producto": "Título",
     "paso": "En evaluación",
     "paso_raw": "evaluacionProceso",
     "dias": 0,
@@ -724,46 +734,6 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "1CJ106181",
-    "producto": "Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "2CC003694",
-    "producto": "Reno. Título",
-    "paso": "Datos empleo",
-    "paso_raw": "datosEmpleo",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1AJ077473",
-    "producto": "Reno. Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1CJ092594",
-    "producto": "Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "1AJ083363",
     "producto": "Reno. Título",
     "paso": "Prueba de vida",
@@ -784,17 +754,7 @@ const D = {
     "ciudad": "Toluca"
   },
   {
-    "titulo": "2CJ004601",
-    "producto": "Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Cancun"
-  },
-  {
-    "titulo": "AJ008542",
+    "titulo": "1CJ106181",
     "producto": "Título",
     "paso": "En evaluación",
     "paso_raw": "evaluacionProceso",
@@ -804,10 +764,20 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "3CJ032731",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
+    "titulo": "2CC003694",
+    "producto": "Reno. Título",
+    "paso": "Datos empleo",
+    "paso_raw": "datosEmpleo",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "04/05",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "AJ008542",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "04/05",
@@ -822,6 +792,26 @@ const D = {
     "urgencia": "🟢",
     "fecha": "04/05",
     "ciudad": "Villahermosa"
+  },
+  {
+    "titulo": "1AJ077473",
+    "producto": "Reno. Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "04/05",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "1CJ092594",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "04/05",
+    "ciudad": "Guadalajara"
   }
 ],
 };

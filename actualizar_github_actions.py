@@ -24,7 +24,7 @@ from io import StringIO
 # ══════════════════════════════════════════════════════
 
 CSV_URL        = os.environ.get('CSV_URL', 'https://nueva.percapita.mx/api/creditos/reporte/export/csv')
-DASHBOARD_HTML = Path(__file__).parent / 'index.html'
+DASHBOARD_HTML = Path(__file__).parent / 'index_base.html'
 LOG_FILE       = Path(__file__).parent / 'actualizaciones.log'
 UMBRAL_RUIDO   = 15
 TAT_THRESHOLD  = 200

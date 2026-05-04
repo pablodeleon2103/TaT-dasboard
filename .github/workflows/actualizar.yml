@@ -48,11 +48,13 @@ jobs:
           staticrypt index.html \
             --password "${{ secrets.STATICRYPT_PASSWORD }}" \
             --remember 30 \
-            --salt "--salt "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4"" \
+            --salt "a1b2c3d4e5f6a1b2c3d4e5f6a1b2c3d4" \
             --template-title "Percapita — Servicio al Cliente" \
             --template-instructions "Ingresa la contraseña para acceder al dashboard" \
             --template-color-primary "#1a4a8a" \
-            --template-color-secondary "#3d9be8"
+            --template-color-secondary "#3d9be8" || echo "STATICRYPT FALLÓ"
+          ls -la
+          ls -la encrypted/ || echo "NO HAY CARPETA ENCRYPTED"
           mv encrypted/index.html index.html
           rm -rf encrypted
 

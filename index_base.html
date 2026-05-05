@@ -571,44 +571,44 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 
 // ══ DATOS (inyectados por actualizar_dashboard.py) ══
 const D = {
-  // Actualizado automáticamente — Lunes 4 May 2026 23:13
+  // Actualizado automáticamente — Martes 5 May 2026 00:10
   mes_label: 'MAY 26',
   mes_anterior_label: 'Abr 26',
-  fecha_corte: 'Lunes 4 May 2026',
-  hora_actualizacion: '23:13',
-  n: 75,
-  tat_med: 1.59,
-  tat_anterior: 3.04,
-  meta: 2.74,
-  monto: 460000,
+  fecha_corte: 'Martes 5 May 2026',
+  hora_actualizacion: '00:10',
+  n: 79,
+  tat_med: 1.65,
+  tat_anterior: 3.05,
+  meta: 2.75,
+  monto: 510000,
   mismodia_pct: 100.0,
-  mismodia_prev: 84.0,
-  cola_marzo_total: 22,
-  cola_atacable: 22,
+  mismodia_prev: 83.7,
+  cola_marzo_total: 21,
+  cola_atacable: 21,
   cola_ruido: 0,
-  horario_mar: [{"b": "09–11h", "n": 12, "pct": 16.0}, {"b": "11–13h", "n": 24, "pct": 32.0}, {"b": "13–15h", "n": 18, "pct": 24.0}, {"b": "15–17h", "n": 14, "pct": 18.7}, {"b": "17–18h", "n": 3, "pct": 4.0}, {"b": "Fuera horario", "n": 4, "pct": 5.3}],
+  horario_mar: [{"b": "09–11h", "n": 12, "pct": 15.2}, {"b": "11–13h", "n": 24, "pct": 30.4}, {"b": "13–15h", "n": 19, "pct": 24.1}, {"b": "15–17h", "n": 15, "pct": 19.0}, {"b": "17–18h", "n": 4, "pct": 5.1}, {"b": "Fuera horario", "n": 5, "pct": 6.3}],
   horario_feb: [{"b": "09–11h", "n": 122, "pct": 15.1}, {"b": "11–13h", "n": 201, "pct": 24.9}, {"b": "13–15h", "n": 187, "pct": 23.1}, {"b": "15–17h", "n": 162, "pct": 20.0}, {"b": "17–18h", "n": 65, "pct": 8.0}, {"b": "Fuera horario", "n": 71, "pct": 8.8}],
   productos: [
     {
         "label": "Título",
         "n": 16,
-        "pct": 21,
-        "tat_med": 1.62,
-        "tat_prev": 3.31,
+        "pct": 20,
+        "tat_med": 1.83,
+        "tat_prev": 3.37,
         "color": "#3d9be8"
     },
     {
         "label": "Híbrido",
-        "n": 31,
-        "pct": 41,
-        "tat_med": 0.46,
+        "n": 33,
+        "pct": 42,
+        "tat_med": 1.32,
         "tat_prev": 1.31,
         "color": "#00c896"
     },
     {
         "label": "Reno. Título",
-        "n": 25,
-        "pct": 33,
+        "n": 27,
+        "pct": 34,
         "tat_med": 2.88,
         "tat_prev": 4.63,
         "color": "#ff8c42"
@@ -624,16 +624,6 @@ const D = {
 ],
   clientes_atacables: [
   {
-    "titulo": "3CJ012929",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 3,
-    "urgencia": "🟢",
-    "fecha": "01/05",
-    "ciudad": "Mérida"
-  },
-  {
     "titulo": "4CJ032133",
     "producto": "Híbrido",
     "paso": "Prueba de vida",
@@ -642,6 +632,16 @@ const D = {
     "urgencia": "🟢",
     "fecha": "01/05",
     "ciudad": "Toluca"
+  },
+  {
+    "titulo": "3CJ012929",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 3,
+    "urgencia": "🟢",
+    "fecha": "01/05",
+    "ciudad": "Mérida"
   },
   {
     "titulo": "2CJ006881",
@@ -664,17 +664,7 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "3CJ023793",
-    "producto": "Reno. Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "04/05",
-    "ciudad": "Toluca"
-  },
-  {
-    "titulo": "BZ018886",
+    "titulo": "H042789",
     "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
@@ -704,7 +694,7 @@ const D = {
     "ciudad": "Saltillo"
   },
   {
-    "titulo": "2CJ021329",
+    "titulo": "BZ018886",
     "producto": "Reno. Título",
     "paso": "En evaluación",
     "paso_raw": "evaluacionProceso",
@@ -714,14 +704,14 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "G000123",
-    "producto": "Título",
-    "paso": "Referencias",
-    "paso_raw": "datosReferenciaPersonal",
+    "titulo": "1CJ082713",
+    "producto": "Reno. Título",
+    "paso": "curpReview",
+    "paso_raw": "curpReview",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "04/05",
-    "ciudad": "Puebla"
+    "ciudad": "Guadalajara"
   },
   {
     "titulo": "H020661",

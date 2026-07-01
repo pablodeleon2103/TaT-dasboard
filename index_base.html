@@ -579,44 +579,52 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 
 <script>
 const D = {
-  // Actualizado automáticamente — Miércoles 1 Jul 2026 17:11
+  // Actualizado automáticamente — Miércoles 1 Jul 2026 18:04
   mes_label: 'JUL 26',
   mes_anterior_label: 'Jun 26',
   fecha_corte: 'Miércoles 1 Jul 2026',
-  hora_actualizacion: '17:11',
-  n: 6,
-  tat_med: 0.37,
+  hora_actualizacion: '18:04',
+  n: 10,
+  tat_med: 0.93,
   tat_anterior: 2.06,
   meta: 1.86,
-  monto: 45000,
+  monto: 55000,
   mismodia_pct: 100.0,
   mismodia_prev: 87.7,
-  cola_marzo_total: 2,
-  cola_atacable: 2,
+  cola_marzo_total: 5,
+  cola_atacable: 5,
   cola_ruido: 0,
-  horario_mar: [{"b": "09–11h", "n": 6, "pct": 100.0}, {"b": "11–13h", "n": 0, "pct": 0.0}, {"b": "13–15h", "n": 0, "pct": 0.0}, {"b": "15–17h", "n": 0, "pct": 0.0}, {"b": "17–18h", "n": 0, "pct": 0.0}, {"b": "Fuera horario", "n": 0, "pct": 0.0}],
+  horario_mar: [{"b": "09–11h", "n": 6, "pct": 60.0}, {"b": "11–13h", "n": 4, "pct": 40.0}, {"b": "13–15h", "n": 0, "pct": 0.0}, {"b": "15–17h", "n": 0, "pct": 0.0}, {"b": "17–18h", "n": 0, "pct": 0.0}, {"b": "Fuera horario", "n": 0, "pct": 0.0}],
   horario_feb: [{"b": "09–11h", "n": 221, "pct": 18.1}, {"b": "11–13h", "n": 286, "pct": 23.5}, {"b": "13–15h", "n": 277, "pct": 22.7}, {"b": "15–17h", "n": 203, "pct": 16.7}, {"b": "17–18h", "n": 119, "pct": 9.8}, {"b": "Fuera horario", "n": 113, "pct": 9.3}],
   productos: [
     {
         "label": "Título",
-        "n": 1,
-        "pct": 17,
+        "n": 2,
+        "pct": 20,
         "tat_med": 0,
-        "tat_prev": 2.94,
+        "tat_prev": 2.93,
         "color": "#3d9be8"
+    },
+    {
+        "label": "Híbrido",
+        "n": 1,
+        "pct": 10,
+        "tat_med": 0,
+        "tat_prev": 1.26,
+        "color": "#00c896"
     },
     {
         "label": "Reno. Título",
         "n": 4,
-        "pct": 67,
-        "tat_med": 0,
+        "pct": 40,
+        "tat_med": 1.49,
         "tat_prev": 2.7,
         "color": "#ff8c42"
     },
     {
         "label": "Reno. Híbrido",
-        "n": 1,
-        "pct": 17,
+        "n": 3,
+        "pct": 30,
         "tat_med": 0.37,
         "tat_prev": 1.41,
         "color": "#f5c842"
@@ -624,10 +632,40 @@ const D = {
 ],
   clientes_atacables: [
   {
-    "titulo": "2CJ015107",
-    "producto": "Reno. Título",
+    "titulo": "1OJ023415",
+    "producto": "Reno. Híbrido",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "01/07",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3CJ076245",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "01/07",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "2AJ068239",
+    "producto": "Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "01/07",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "2CJ015107",
+    "producto": "Reno. Título",
+    "paso": "En evaluación",
+    "paso_raw": "evaluacionProceso",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "01/07",

@@ -579,68 +579,58 @@ html,body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--
 
 <script>
 const D = {
-  // Actualizado automáticamente — Viernes 21 Ago 2026 18:32
+  // Actualizado automáticamente — Viernes 21 Ago 2026 19:17
   mes_label: 'AGO 26',
   mes_anterior_label: 'Jul 26',
   fecha_corte: 'Viernes 21 Ago 2026',
-  hora_actualizacion: '18:32',
-  n: 887,
-  tat_med: 2.69,
-  tat_anterior: 1.99,
-  meta: 1.79,
-  monto: 7472500,
-  mismodia_pct: 85.6,
-  mismodia_prev: 86.9,
-  cola_marzo_total: 65,
-  cola_atacable: 57,
+  hora_actualizacion: '19:17',
+  n: 892,
+  tat_med: 2.32,
+  tat_anterior: 2.38,
+  meta: 2.18,
+  monto: 7575000,
+  mismodia_pct: 100.0,
+  mismodia_prev: 84.0,
+  cola_marzo_total: 56,
+  cola_atacable: 48,
   cola_ruido: 8,
-  horario_mar: [{"b": "09–11h", "n": 139, "pct": 15.7}, {"b": "11–13h", "n": 236, "pct": 26.6}, {"b": "13–15h", "n": 211, "pct": 23.8}, {"b": "15–17h", "n": 133, "pct": 15.0}, {"b": "17–18h", "n": 89, "pct": 10.0}, {"b": "Fuera horario", "n": 79, "pct": 8.9}],
+  horario_mar: [{"b": "09–11h", "n": 139, "pct": 15.6}, {"b": "11–13h", "n": 239, "pct": 26.8}, {"b": "13–15h", "n": 211, "pct": 23.7}, {"b": "15–17h", "n": 133, "pct": 14.9}, {"b": "17–18h", "n": 90, "pct": 10.1}, {"b": "Fuera horario", "n": 80, "pct": 9.0}],
   horario_feb: [{"b": "09–11h", "n": 197, "pct": 20.1}, {"b": "11–13h", "n": 225, "pct": 22.9}, {"b": "13–15h", "n": 252, "pct": 25.7}, {"b": "15–17h", "n": 140, "pct": 14.3}, {"b": "17–18h", "n": 106, "pct": 10.8}, {"b": "Fuera horario", "n": 61, "pct": 6.2}],
   productos: [
     {
         "label": "Título",
-        "n": 190,
-        "pct": 21,
-        "tat_med": 2.75,
-        "tat_prev": 3.16,
+        "n": 192,
+        "pct": 22,
+        "tat_med": 4.46,
+        "tat_prev": 3.5,
         "color": "#3d9be8"
     },
     {
         "label": "Híbrido",
-        "n": 298,
+        "n": 299,
         "pct": 34,
-        "tat_med": 2.03,
-        "tat_prev": 1.23,
+        "tat_med": 0.92,
+        "tat_prev": 3.45,
         "color": "#00c896"
     },
     {
         "label": "Reno. Título",
-        "n": 281,
+        "n": 282,
         "pct": 32,
-        "tat_med": 3.66,
-        "tat_prev": 2.35,
+        "tat_med": 3.05,
+        "tat_prev": 3.55,
         "color": "#ff8c42"
     },
     {
         "label": "Reno. Híbrido",
-        "n": 113,
+        "n": 114,
         "pct": 13,
-        "tat_med": 1.43,
-        "tat_prev": 1.28,
+        "tat_med": 4.3,
+        "tat_prev": 0.75,
         "color": "#f5c842"
     }
 ],
   clientes_atacables: [
-  {
-    "titulo": "3OJ017764",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 15,
-    "urgencia": "🔴",
-    "fecha": "06/08",
-    "ciudad": "Guadalajara"
-  },
   {
     "titulo": "3OJ021751",
     "producto": "Híbrido",
@@ -656,6 +646,16 @@ const D = {
     "producto": "Título",
     "paso": "datosDomicilioCobranza",
     "paso_raw": "datosDomicilioCobranza",
+    "dias": 15,
+    "urgencia": "🔴",
+    "fecha": "06/08",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3OJ017764",
+    "producto": "Híbrido",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
     "dias": 15,
     "urgencia": "🔴",
     "fecha": "06/08",
@@ -692,14 +692,14 @@ const D = {
     "ciudad": "Toluca"
   },
   {
-    "titulo": "3NF000588",
-    "producto": "Título",
+    "titulo": "2DJ001537",
+    "producto": "Híbrido",
     "paso": "Validación CURP",
     "paso_raw": "generaCURP",
     "dias": 9,
     "urgencia": "🟡",
     "fecha": "12/08",
-    "ciudad": "Acapulco"
+    "ciudad": "Tampico"
   },
   {
     "titulo": "2AH000874",
@@ -712,6 +712,16 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
+    "titulo": "3NF000588",
+    "producto": "Título",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 9,
+    "urgencia": "🟡",
+    "fecha": "12/08",
+    "ciudad": "Acapulco"
+  },
+  {
     "titulo": "2CJ025025",
     "producto": "Reno. Título",
     "paso": "Datos empleo",
@@ -722,27 +732,7 @@ const D = {
     "ciudad": "Saltillo"
   },
   {
-    "titulo": "2DJ001537",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 8,
-    "urgencia": "🟡",
-    "fecha": "12/08",
-    "ciudad": "Tampico"
-  },
-  {
-    "titulo": "1CJ052474",
-    "producto": "Título",
-    "paso": "Medio de entrega",
-    "paso_raw": "medioEntrega",
-    "dias": 8,
-    "urgencia": "🟡",
-    "fecha": "12/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "3CJ019346",
+    "titulo": "1AJ033804",
     "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
@@ -752,7 +742,7 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "1AJ033804",
+    "titulo": "3CJ019346",
     "producto": "Reno. Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
@@ -772,14 +762,14 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "1CJ009278",
+    "titulo": "1CJ052474",
     "producto": "Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 7,
+    "paso": "Medio de entrega",
+    "paso_raw": "medioEntrega",
+    "dias": 8,
     "urgencia": "🟡",
-    "fecha": "14/08",
-    "ciudad": "Villahermosa"
+    "fecha": "12/08",
+    "ciudad": "Guadalajara"
   },
   {
     "titulo": "2DJ013449",
@@ -790,6 +780,16 @@ const D = {
     "urgencia": "🟡",
     "fecha": "14/08",
     "ciudad": "Toluca"
+  },
+  {
+    "titulo": "1CJ009278",
+    "producto": "Título",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 7,
+    "urgencia": "🟡",
+    "fecha": "14/08",
+    "ciudad": "Villahermosa"
   },
   {
     "titulo": "E000824",
@@ -812,6 +812,46 @@ const D = {
     "ciudad": "Saltillo"
   },
   {
+    "titulo": "1CJ008177",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 4,
+    "urgencia": "🟢",
+    "fecha": "17/08",
+    "ciudad": "Monclova"
+  },
+  {
+    "titulo": "1OJ038627",
+    "producto": "Híbrido",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
+    "dias": 4,
+    "urgencia": "🟢",
+    "fecha": "17/08",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "2AJ051061",
+    "producto": "Título",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 4,
+    "urgencia": "🟢",
+    "fecha": "17/08",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3CJ000839",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 4,
+    "urgencia": "🟢",
+    "fecha": "17/08",
+    "ciudad": "Cancun"
+  },
+  {
     "titulo": "1CJ004787",
     "producto": "Reno. Híbrido",
     "paso": "Datos empleo",
@@ -830,46 +870,6 @@ const D = {
     "urgencia": "🟢",
     "fecha": "17/08",
     "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "2AJ051061",
-    "producto": "Título",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 4,
-    "urgencia": "🟢",
-    "fecha": "17/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1OJ038627",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 4,
-    "urgencia": "🟢",
-    "fecha": "17/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1CJ008177",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 4,
-    "urgencia": "🟢",
-    "fecha": "17/08",
-    "ciudad": "Monclova"
-  },
-  {
-    "titulo": "3CJ000839",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 4,
-    "urgencia": "🟢",
-    "fecha": "17/08",
-    "ciudad": "Cancun"
   },
   {
     "titulo": "2AJ039223",
@@ -892,16 +892,6 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "R016355",
-    "producto": "Título",
-    "paso": "Medio de entrega",
-    "paso_raw": "medioEntrega",
-    "dias": 2,
-    "urgencia": "🟢",
-    "fecha": "19/08",
-    "ciudad": "Guadalajara"
-  },
-  {
     "titulo": "3CJ043687",
     "producto": "Híbrido",
     "paso": "Referencias",
@@ -912,6 +902,16 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
+    "titulo": "2DJ005744",
+    "producto": "Híbrido",
+    "paso": "Referencias",
+    "paso_raw": "datosReferenciaPersonal",
+    "dias": 2,
+    "urgencia": "🟢",
+    "fecha": "19/08",
+    "ciudad": "Puebla"
+  },
+  {
     "titulo": "1DJ003861",
     "producto": "Híbrido",
     "paso": "Validación CURP",
@@ -920,6 +920,16 @@ const D = {
     "urgencia": "🟢",
     "fecha": "19/08",
     "ciudad": "Cancun"
+  },
+  {
+    "titulo": "R016355",
+    "producto": "Título",
+    "paso": "Medio de entrega",
+    "paso_raw": "medioEntrega",
+    "dias": 2,
+    "urgencia": "🟢",
+    "fecha": "19/08",
+    "ciudad": "Guadalajara"
   },
   {
     "titulo": "1OJ036990",
@@ -942,14 +952,14 @@ const D = {
     "ciudad": "Mérida"
   },
   {
-    "titulo": "2CJ023435",
+    "titulo": "3AJ001041",
     "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
+    "paso": "Prueba de vida",
+    "paso_raw": "procesoPruebaDeVida",
     "dias": 1,
     "urgencia": "🟢",
     "fecha": "20/08",
-    "ciudad": "Cancun"
+    "ciudad": "Guadalajara"
   },
   {
     "titulo": "2CJ007278",
@@ -972,6 +982,16 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
+    "titulo": "2CJ023435",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 1,
+    "urgencia": "🟢",
+    "fecha": "20/08",
+    "ciudad": "Cancun"
+  },
+  {
     "titulo": "3CJ048826",
     "producto": "Híbrido",
     "paso": "Prueba de vida",
@@ -980,26 +1000,6 @@ const D = {
     "urgencia": "🟢",
     "fecha": "19/08",
     "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "3AJ001041",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 1,
-    "urgencia": "🟢",
-    "fecha": "20/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "2DJ009977",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 1,
-    "urgencia": "🟢",
-    "fecha": "20/08",
-    "ciudad": "Toluca"
   },
   {
     "titulo": "3CL000652",
@@ -1012,16 +1012,6 @@ const D = {
     "ciudad": "Toluca"
   },
   {
-    "titulo": "2DJ005744",
-    "producto": "Híbrido",
-    "paso": "Referencias",
-    "paso_raw": "datosReferenciaPersonal",
-    "dias": 1,
-    "urgencia": "🟢",
-    "fecha": "19/08",
-    "ciudad": "Puebla"
-  },
-  {
     "titulo": "3CJ071847",
     "producto": "Híbrido",
     "paso": "Validación CURP",
@@ -1032,44 +1022,44 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "1OJ014824",
+    "titulo": "2CJ068720",
     "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "20/08",
+    "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "1CJ005314",
+    "producto": "Título",
     "paso": "Prueba de vida",
     "paso_raw": "procesoPruebaDeVida",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "21/08",
-    "ciudad": "Guadalajara"
+    "ciudad": "Cancun"
   },
   {
-    "titulo": "2AJ010546",
+    "titulo": "1CE001095",
     "producto": "Título",
-    "paso": "Medio de entrega",
-    "paso_raw": "medioEntrega",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "5NJ003743",
-    "producto": "Híbrido",
-    "paso": "Medio de entrega",
-    "paso_raw": "medioEntrega",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Saltillo"
-  },
-  {
-    "titulo": "2CJ054569",
-    "producto": "Reno. Híbrido",
     "paso": "En evaluación",
     "paso_raw": "evaluacionProceso",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "21/08",
     "ciudad": "Guadalajara"
+  },
+  {
+    "titulo": "3CF000310",
+    "producto": "Híbrido",
+    "paso": "Validación CURP",
+    "paso_raw": "generaCURP",
+    "dias": 0,
+    "urgencia": "🟢",
+    "fecha": "21/08",
+    "ciudad": "Toluca"
   },
   {
     "titulo": "5CJ020059",
@@ -1112,90 +1102,10 @@ const D = {
     "ciudad": "Guadalajara"
   },
   {
-    "titulo": "2CJ068720",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "20/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1CF003604",
-    "producto": "Reno. Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "4NJ004879",
-    "producto": "Híbrido",
+    "titulo": "2CJ075303",
+    "producto": "Título",
     "paso": "Datos empleo",
     "paso_raw": "datosEmpleo",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Monclova"
-  },
-  {
-    "titulo": "1OJ005180",
-    "producto": "Híbrido",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "1CJ005314",
-    "producto": "Título",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Cancun"
-  },
-  {
-    "titulo": "2CJ061234",
-    "producto": "Reno. Título",
-    "paso": "En evaluación",
-    "paso_raw": "evaluacionProceso",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Guadalajara"
-  },
-  {
-    "titulo": "3CF000310",
-    "producto": "Híbrido",
-    "paso": "Validación CURP",
-    "paso_raw": "generaCURP",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Toluca"
-  },
-  {
-    "titulo": "2CJ015572",
-    "producto": "Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
-    "dias": 0,
-    "urgencia": "🟢",
-    "fecha": "21/08",
-    "ciudad": "Mérida"
-  },
-  {
-    "titulo": "2AJ029012",
-    "producto": "Título",
-    "paso": "Prueba de vida",
-    "paso_raw": "procesoPruebaDeVida",
     "dias": 0,
     "urgencia": "🟢",
     "fecha": "21/08",
